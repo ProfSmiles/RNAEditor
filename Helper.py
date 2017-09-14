@@ -268,7 +268,7 @@ class Helper():
                 #print " ".join(cmd),resultFile,logFile
                 
                 #retcode = subprocess.call(cmd, stdout=resultFile, stderr=logFile)
-                rnaEdit.runningCommand = subprocess.Popen(cmd, stdout=resultFile, stderr=logFile)
+                rnaEdit.runningCommand = subprocess.Popen(cmd, stdout=logFile, stderr=logFile)
                 retcode = rnaEdit.runningCommand.wait()
                 """while retcode==None:
                     #print "check if process is still running"
